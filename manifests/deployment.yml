@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ramanjksimpledevopsproject 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ramanjksimpledevopsproject
+  template:
+    metadata:
+      labels:
+        app: ramanjksimpledevopsproject 
+    spec:
+      containers:
+        - name: ramanjksimpledevopsproject 
+          image: testmulticluster.azurecr.io/ramanjksimpledevopsproject
+          ports:
+          - containerPort: 80
